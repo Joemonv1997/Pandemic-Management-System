@@ -1,0 +1,4 @@
+/venv
+db.sqlite3
+pandemic/__pycache__
+management/__pycache__
