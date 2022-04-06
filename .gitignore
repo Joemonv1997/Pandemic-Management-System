@@ -1,4 +1,5 @@
 /venv
+/.vscode
 db.sqlite3
 pandemic/__pycache__
 management/__pycache__
