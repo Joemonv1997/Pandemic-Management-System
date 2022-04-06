@@ -1,13 +1,12 @@
 # Welcome to pandemic Management System
 
-The purpose of this project is to get the overview of 
+The purpose of this project is to get the overview of
 
-							- how many people get affected in a certain pandemic
-							- In which state and strict it affected most
-							- how many volunteers(Doctors, Nurses..etc) are there to help 
-							- Is there sufficient availablity of neccasery things
+* how many people get affected in a certain pandemic
+* In which state and strict it affected most
 
-
+* how many volunteers(Doctors, Nurses..etc) are there to help
+* Is there sufficient availablity of neccasery things
 
 This project has a
 
@@ -27,11 +26,9 @@ This project has a
 
 ## Doctor Admin has the power to create patients
 
-
-
 The language that are used to create this project are Django
 
-### Requirements are 
+### Requirements are
 
 |                     |
 | ------------------- |
