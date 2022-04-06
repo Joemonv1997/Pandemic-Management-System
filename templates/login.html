@@ -1,4 +1,8 @@
 {% extends 'home.html' %}
 {% block content %}
-{{form.as_p}}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<button type="submit">Log In</button>
+
 {% endblock content %}
