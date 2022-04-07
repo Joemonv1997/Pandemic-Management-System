@@ -40,7 +40,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'h' %}">{{request.user.username}}</a>
                   </li>
-                    <li><button class="btn btn-outline-warning me-2" type="button">
+                    <li><button class="btn btn-outline-warning me-2" type="button" onclick="document.location='{% url "Logout" %}'">
                         logout
                     </button></li>
               </ul>

@@ -4,7 +4,6 @@ The purpose of this project is to get the overview of
 
 * how many people get affected in a certain pandemic
 * In which state and strict it affected most
-
 * how many volunteers(Doctors, Nurses..etc) are there to help
 * Is there sufficient availablity of neccasery things
 
@@ -44,8 +43,7 @@ python3 manage.py runserver
 
 ![Screenshot 2022-04-07 at 10.59.07 AM](images/login.png)
 
- 													Fig: Login Page in Pandemic Management System
+​                                                     Fig: Login Page in Pandemic Management System
 
 ![](images/country.png)
-
-​															Fig: Country Create Form
+    																	Fig: Country Create Form

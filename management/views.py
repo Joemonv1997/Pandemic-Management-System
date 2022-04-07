@@ -63,3 +63,12 @@ class Countrycreate(TemplateView):
             country.save()
             return redirect("/")
         return render(request,self.template_name)
+
+
+def logoutuser(request):
+    if request.user.is_authenticated:
+        logout(request)
+    else:
+        return redirect("/login")
+    
+    return redirect("/")

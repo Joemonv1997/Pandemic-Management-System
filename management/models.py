@@ -50,4 +50,10 @@ class Doctor(models.Model):
         return f"{self.Name}"
 
 
-# class Patients(models.Model):
+class Profile(models.Model):
+    FullName=models.CharField(max_length=100, null=True, blank=True)
+    LastName=models.CharField(max_length=100, null=True, blank=True)
+    Country=models.ForeignKey(Country, models.CASCADE)
+    State=models.ForeignKey(State, models.CASCADE)
+    District=models.ForeignKey(District,models.CASCADE)
+    
