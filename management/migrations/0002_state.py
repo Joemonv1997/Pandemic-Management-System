@@ -7,16 +7,30 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('management', '0001_initial'),
+        ("management", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='State',
+            name="State",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('State', models.CharField(blank=True, max_length=100, null=True)),
-                ('Country', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='management.country')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("State", models.CharField(blank=True, max_length=100, null=True)),
+                (
+                    "Country",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="management.country",
+                    ),
+                ),
             ],
         ),
     ]

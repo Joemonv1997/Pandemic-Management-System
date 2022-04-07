@@ -36,9 +36,20 @@
                 </ul>
             </div>
               <ul class="nav navbar-nav navbar-right">
-                <li><button class="btn btn-outline-warning me-2" type="button">Register</button></li>
-                <li><button type="button" class="btn btn-outline-success me-2" onclick="document.location='{% url "Login" %}'">Login</button></li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'h' %}">{{request.user.username}}</a>
+                  </li>
+                    <li><button class="btn btn-outline-warning me-2" type="button">
+                        logout
+                    </button></li>
               </ul>
+              {% else %}
+              <li><button class="btn btn-outline-warning me-2" type="button">Register</button></li>
+              <li><button type="button" class="btn btn-outline-success me-2" onclick="document.location='{% url "Login" %}'">Login</button></li>
+         </ul>
+         {% endif %}
+
             </div>
           </nav>
         {% block content %} {% endblock %}
