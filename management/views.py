@@ -25,3 +25,11 @@ class LogInUser(TemplateView):
             return HttpResponse("Invalid credentials.")
         login(request, user)
         return redirect('/')
+
+
+class RegisterUser(TemplateView):
+    def get(self,request,*args, **kwargs):
+        return render(request,"register.html")
+    def post(self,request,*args, **kwargs):
+        print(request.POST)
+        return redirect('/')
