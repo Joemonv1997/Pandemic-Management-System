@@ -41,3 +41,11 @@ pip install -r requirements.txt
 python3 manage.py migrate
 python3 manage.py runserver
 ```
+
+![Screenshot 2022-04-07 at 10.59.07 AM](images/login.png)
+
+ 													Fig: Login Page in Pandemic Management System
+
+![](images/country.png)
+
+​															Fig: Country Create Form
