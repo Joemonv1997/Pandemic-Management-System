@@ -8,5 +8,11 @@ urlpatterns = [
     path("logout", views.logoutuser, name="Logout"),
     path("register", views.RegisterUser.as_view(), name="register"),
     path("group",views.Groupcreate.as_view(),name="group"),
-    path("countrycreate",views.Countrycreate.as_view(),name="country")
+    path("countrycreate",views.Countrycreate.as_view(),name="country"),
+    path("statecreate",views.Statecreate.as_view(),name="state"),
+    path("districtcreate",views.Districtcreate.as_view(),name="district"),
+    path("hospitalcreate",views.Hospitalcreate.as_view(),name="hospital"),
+    path("doctorcreate",views.Doctorcreate.as_view(),name="doctor"),
+    path("usercreate",views.Registercreate.as_view(),name="userregister"),
+
 ]

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
 from management.models import Country
-from .forms import UserRegistrationForm, UserForm
+from .forms import UserRegistrationForm, UserForm,StateForm,DistrictForm,HospitalForm,DoctorForm,RegisterForm,ProfileForm
 from django.views.generic.base import TemplateView
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User,Group
@@ -72,3 +72,69 @@ def logoutuser(request):
         return redirect("/login")
     
     return redirect("/")
+
+
+
+class Statecreate(TemplateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, "state_create.html",{'form':StateForm})
+
+    def post(self, request, *args, **kwargs):
+        print(request.POST)
+        form=StateForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+        
+        return render(request,"state_create.html",{'form':form} )
+
+class Districtcreate(TemplateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, "district_create.html",{'form':DistrictForm})
+
+    def post(self, request, *args, **kwargs):
+        print(request.POST)
+        form=DistrictForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+        
+        return render(request,"district_create.html",{'form':form} )
+
+class Hospitalcreate(TemplateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, "hospital_create.html",{'form':HospitalForm})
+
+    def post(self, request, *args, **kwargs):
+        form=HospitalForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+        
+        return render(request,"district_create.html",{'form':form} )
+
+
+class Doctorcreate(TemplateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, "doctor_create.html",{'form':DoctorForm})
+
+    def post(self, request, *args, **kwargs):
+        form=DoctorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+        
+        return render(request,"doctor_create.html",{'form':form} )
+
+
+class Registercreate(TemplateView):
+    def get(self, request, *args, **kwargs):
+        return render(request, "user_create.html",{'form':RegisterForm,'profile':ProfileForm,'hospital':DoctorForm})
+
+    def post(self, request, *args, **kwargs):
+        form=RegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/")
+        
+        return render(request,"doctor_create.html",{'form':form} )
