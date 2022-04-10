@@ -14,5 +14,9 @@ urlpatterns = [
     path("hospitalcreate",views.Hospitalcreate.as_view(),name="hospital"),
     path("doctorcreate",views.Doctorcreate.as_view(),name="doctor"),
     path("usercreate",views.Registercreate.as_view(),name="userregister"),
+    path("userlist",views.users.as_view(),name="userlist"),
+    path("usall",views.allusers.as_view(),name="usa"),
+    path("usal",views.alluser.as_view(),name="us"),
+    path("update/<int:id>",views.updateuser.as_view(),name="updateuser")
 
 ]

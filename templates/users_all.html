@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+{% block content %}
+<ul id="display_data"></ul>
+
+
+{% endblock %}
+
+{% block datascript %}
+<script>
+    $(document).ready(function(){
+        setInterval(function(){
+            $.ajax({
+                type:"GET",
+                url:"{% url "usa" %}",
+                success:function(response){
+                    $("#display_data").empty();
+                    for (var key in response.all_users){
+                        console.log(key)
+                        var temp="<li>"+response.all_users[key].username+"</    li>";
+                        $("#display_data").append(temp)
+
+                    }
+                }
+                
+            });
+        },1000)
+        console.log("Hello World")
+    })
+</script>
+{% endblock %}

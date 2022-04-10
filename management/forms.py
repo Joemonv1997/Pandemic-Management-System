@@ -60,12 +60,12 @@ class DoctorForm(forms.ModelForm):
         fields=("Hospital",'Main')
 
 
-class RegisterForm(forms.ModelForm):
+class RegisterForm(UserCreationForm):
     # email = forms.EmailField(label = "Email")
 
     class Meta:
         model = User
-        fields = ('username','password')
+        fields ='__all__'
 
 
 class ProfileForm(forms.ModelForm):
